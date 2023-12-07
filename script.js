@@ -39,3 +39,15 @@ if (deviceWidth > 768) {
     projectThumbnail.appendChild(videoElement);
   }
 }
+
+const element = document.getElementById('typewriter');
+
+  function restartAnimation() {
+    element.style.animation = 'none';
+    element.offsetHeight; /* Trigger reflow to restart animation */
+    element.style.animation = null;
+    setTimeout(restartAnimation, 4000); // Adjust the duration to control the loop (milliseconds)
+  }
+
+  // Start the typewriter animation
+  restartAnimation();
