@@ -40,14 +40,33 @@ if (deviceWidth > 768) {
   }
 }
 
-const element = document.getElementById('typewriter');
+$('#about').mouseover(function () {
+  $('#nav_about .line').addClass('mouse_enter_line');
+  $('#nav_about a').addClass('mouse_enter');
+});
 
-  function restartAnimation() {
-    element.style.animation = 'none';
-    element.offsetHeight; /* Trigger reflow to restart animation */
-    element.style.animation = null;
-    setTimeout(restartAnimation, 4000); // Adjust the duration to control the loop (milliseconds)
-  }
+$('#about').mouseout(function () {
+  $('#nav_about .line').removeClass('mouse_enter_line');
+  $('#nav_about a').removeClass('mouse_enter');
+});
 
-  // Start the typewriter animation
-  restartAnimation();
+$('#projects').mouseover(function () {
+  $('#nav_projects .line').addClass('mouse_enter_line');
+  $('#nav_projects a').addClass('mouse_enter');
+});
+
+$('#projects').mouseout(function () {
+  $('#nav_projects .line').removeClass('mouse_enter_line');
+  $('#nav_projects a').removeClass('mouse_enter');
+});
+
+$('#skills').mouseover(function () {
+  $('#nav_skills .line').addClass('mouse_enter_line');
+  $('#nav_skills a').addClass('mouse_enter');
+});
+
+$('#skills').mouseout(function () {
+  $('#nav_skills .line').removeClass('mouse_enter_line');
+  $('#nav_skills a').removeClass('mouse_enter');
+});
+

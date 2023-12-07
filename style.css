@@ -31,7 +31,7 @@ main {
     height: 100vh;
 }
 
-aside .left {
+.left {
     flex: 1;
     /* width: 300px; */
     align-self: flex-start;
@@ -88,10 +88,22 @@ aside .left {
     color: white;
     text-transform: uppercase;
     font-weight: 700;
+    transition: color 0.5s ease-in-out;
 }
 
-.nav a:hover .line {
+.h_box:hover .line {
     background-color: red;
+}
+
+.h_box:hover a{
+    color: red;
+}
+
+.nav .h_box .mouse_enter_line{
+    background-color: red;
+}
+.nav .h_box .mouse_enter{
+    color: red;
 }
 
 .h_box {
@@ -105,6 +117,7 @@ aside .left {
     height: 2px;
     width: 30px;
     background-color: #eaeaea;
+    transition: background-color 0.5s ease-in-out;
 }
 
 .socials {
@@ -344,5 +357,94 @@ ul li img {
         position: relative;
         width: 100%;
         background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media (min-width: 420px) and (max-width: 992px) and (orientation: landscape) {
+    .left {
+        flex: 0;
+        /* width: 300px; */
+        align-self: flex-start;
+    }
+
+    .name{
+        font-size: 2.3rem;
+    }
+    body main {
+        padding: 2rem 2rem 0 2rem;
+        display: flex;
+        flex-flow: row;
+        gap: 1rem;
+        height: 100vh;
+    }
+
+    .nav {
+        margin: 1rem 0;
+        display: flex;
+        flex-flow: row;
+        gap: 0.8rem;
+    }
+
+    .nav .h_box .mouse_enter{
+        border-bottom: 2px solid red;
+    }
+    
+    .nav a {
+        border-bottom: 2px solid white;
+        padding: 0.2rem;
+        transition: color 0.5s ease-in-out;
+    }
+
+    .h_box:hover a{
+        border-bottom: 2px solid red;
+    }
+    
+    .h_box {
+        display: block;
+    }
+    
+    .line {
+        display: none;
+    }
+    
+    .socials {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 0.5rem;
+    }
+    
+    .socials a {
+        display: flex;
+        flex-flow: column;
+        gap: 0.5rem;
+        position: relative;
+    }
+    
+    .socials a i {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+    
+    /* .socials a:nth-child(1):hover{
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                background-color: white;
+                color: black;
+            } */
+    
+    
+    .socials a label {
+        font-weight: 700;
+        color: black;
+        padding: 0.5rem;
+        background-color: white;
+        border-radius: 5px;
+        visibility: hidden;
+        position: absolute;
+        top: 2.5rem;
+    }
+    
+    .socials a:hover label {
+        visibility: visible;
     }
 }
