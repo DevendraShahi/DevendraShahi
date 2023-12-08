@@ -2,17 +2,23 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,700&display=swap");
 
+:root {
+    --primary-color: #0a0908;
+    --secondary-color: #F0EFEE;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out ;
 }
 
 body {
     /* background-color: rgb(14, 14, 14); */
-    background-color: #0a0908;
-    color: #F0EFEE;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     font-family: "DM Sans", sans-serif;
     /* font-family: 'Courier Prime', monospace; */
     position: relative;
@@ -20,7 +26,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #eaeaea;
+    color: var(--secondary-color);
 }
 
 main {
@@ -85,7 +91,7 @@ main {
     padding: 0.5rem 0;
     font-size: 0.9rem;
     text-decoration: none;
-    color: white;
+    color: var(--secondary-color);
     text-transform: uppercase;
     font-weight: 700;
     transition: color 0.5s ease-in-out;
@@ -116,7 +122,7 @@ main {
 .line {
     height: 2px;
     width: 30px;
-    background-color: #eaeaea;
+    background-color: var(--secondary-color);
     transition: background-color 0.5s ease-in-out;
 }
 
@@ -148,9 +154,9 @@ main {
 
 .socials a label {
     font-weight: 700;
-    color: black;
+    color: var(--primary-color);
     padding: 0.5rem;
-    background-color: white;
+    background-color: var(--secondary-color);
     border-radius: 5px;
     visibility: hidden;
     position: absolute;
@@ -159,6 +165,16 @@ main {
 
 .socials a:hover label {
     visibility: visible;
+}
+
+.themes{
+    margin: 2rem 0;
+}
+
+.themes i{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--secondary-color);
 }
 
 /* 
@@ -186,7 +202,7 @@ main {
     /* From https://css.glass */
     /* background: rgba(125, 125, 125, 0.1); */
     /* background-color: rgba(241, 224, 198, 0.1); */
-    background-color: rgba(235, 235, 235, 0.1);
+    background-color: rgba(125, 125, 125, 0.2);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
@@ -236,7 +252,7 @@ ul li {
     height: 80px;
     width: 80px;
     border-radius: 5px;
-    background-color: #F0EFEE;
+    background-color: var(--secondary-color);
     /* background-color: rgba(235, 235, 235, 0.1); */
     /* background-color: rgba(10, 10, 10, 0.1); */
     padding: 1rem;
@@ -255,7 +271,8 @@ ul li img {
 }
 
 .footer {
-    background-color: black;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
     text-align: center;
     padding: 1rem;
 }
@@ -298,6 +315,10 @@ ul li img {
     right: 0;
 }
 
+p{
+    font-weight: 500;
+}
+
 .skills p {
     font-size: 1.5rem;
     margin: 1rem 0;
@@ -315,6 +336,18 @@ ul li img {
         padding: 2rem 2rem 0 2rem;
         display: block;
         /* height: 100%; */
+    }
+
+    .themes{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 0.5rem;
+    }
+
+    .themes i{
+        font-size: 1.5rem;
     }
 
     .myself{
@@ -390,7 +423,7 @@ ul li img {
     }
     
     .nav a {
-        border-bottom: 2px solid white;
+        border-bottom: 2px solid var(--secondary-color);
         padding: 0.2rem;
         transition: color 0.5s ease-in-out;
     }
@@ -437,7 +470,7 @@ ul li img {
         font-weight: 700;
         color: black;
         padding: 0.5rem;
-        background-color: white;
+        background-color: var(--secondary-color);
         border-radius: 5px;
         visibility: hidden;
         position: absolute;

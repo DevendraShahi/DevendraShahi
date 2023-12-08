@@ -70,3 +70,14 @@ $('#skills').mouseout(function () {
   $('#nav_skills a').removeClass('mouse_enter');
 });
 
+$('#switch_themes .light').click(function () {
+  if ($('html').css('--primary-color') != '#F0EFEE') {
+    $('html').css('--primary-color', '#F0EFEE');
+    $('html').css('--secondary-color', '#0a0908');
+  }
+  else {
+    $('html').css('--primary-color', '#0a0908');
+    $('html').css('--secondary-color', '#F0EFEE');  
+  }
+});
+
